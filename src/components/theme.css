@@ -1,0 +1,27 @@
+/* browser light-theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: #0f4813;
+    --color-primary-light: #dce8e2;
+    --color-secondary: #569b0c;
+    --color-background: #f2f1f0;
+    --color-text: #2e2e2e;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gred: #a51818;
+  }
+}
+
+/* browser dark-theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #0f4813;
+    --color-primary-light: #dce8e2;
+    --color-secondary: #569b0c;
+    --color-background: #f2f1f0;
+    --color-text: #2e2e2e;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gred: #a51818;
+  }
+}
