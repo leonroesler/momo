@@ -1,0 +1,86 @@
+$sans-font-stack: 'Montserrat', Helvetica, Arial, sans-serif
+$serif-font-stack: 'Playfair Display', Times New Romoan, serif
+
+$huge-size: 10rem
+
+$h1-size: 6rem
+$h1-weight: 800
+$h1-sizes: ( '1200px' : 6rem, '900px' : 6rem, '768px' : 5rem, '576px' : 3rem, null : 6rem)
+
+$h2-size: 2rem
+$h2-sizes: ( '1200px' : 2rem, '900px' : 2rem, '768px' : 1.7rem, '576px' : 1.5rem, null : 2rem)
+$h2-weight: 800
+
+$h3-size: 1.5rem
+$h3-sizes: ( '1200px' : 1.5rem, '900px' : 1.5rem, '768px' : 1.2rem, '576px' : 1.2rem, null : 1.5rem)
+$h3-weight: 700
+
+$h4-size: 1.2rem
+$h4-sizes: ( '1200px' : 1.2rem, '900px' : 1.2rem, '768px' : 1rem, '576px' : 1rem, null : 1.5rem)
+$h4-weight: 700
+
+$h5-size: 1.1rem
+$h5-weight: 600
+
+$h6-size: .8rem
+$h6-weight: 600
+
+$p-size: 1rem
+$p-weight: 400
+
+$small-size: .7rem
+
+// make font sizes responsive depending on break-points
+@mixin font-size($fs-map)
+    @each $fs-breakpoint, $fs-font-size in $fs-map
+        @if $fs-breakpoint == null
+            font-size: $fs-font-size
+        @else
+            @media screen and (max-width: $fs-breakpoint)
+                font-size: $fs-font-size
+
+html, body
+    font-size: 16px
+    font-family: $sans-font-stack
+
+h1, h2, h3, h4, h5, h6
+    font-family: $sans-font-stack
+    color: var(--color-text)
+
+h1
+    @include font-size($h1-sizes)
+    font-weight: $h1-weight
+
+.huge-font
+    font-family: $serif-font-stack
+
+h2
+    @include font-size($h2-sizes)
+    font-weight: $h2-weight
+
+h3
+    @include font-size($h3-sizes)
+    font-weight: $h3-weight
+
+h4
+    @include font-size($h4-sizes)
+    font-weight: $h4-weight
+
+h5
+    font-size: $h5-size
+    font-weight: $h5-weight
+
+h6
+    font-size: $h6-size
+    font-weight: $h6-weight
+
+p, a
+    font-size: $p-size
+    font-weight: $p-weight
+    font-family: $sans-font-stack
+    color: var(--color-text)
+
+a
+    cursor: pointer
+    color: var(--color-secondary)
+    text-decoration: none
