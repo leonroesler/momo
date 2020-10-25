@@ -1,10 +1,14 @@
 import React from "react"
+import Button from "../../reusables/Button"
 
 const Home = () => {
     return(
-        <div>
+        <main className="main--home">
             <h1>Hello Momo</h1>
-        </div>
+            <h2>Finde <span>deine</span> Pflanze.</h2>
+
+            <Button>Zur Auswahl</Button>
+        </main>
     )
 }
 
