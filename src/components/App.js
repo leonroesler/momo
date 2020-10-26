@@ -1,6 +1,6 @@
 import Navbar from "./reusables/Navbar";
 import Home from './routes/Home/Home'
-import Plants from './routes/Plants/Plants'
+import Plants from './routes/plants/Plants'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "./styles.sass";
 
