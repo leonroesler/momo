@@ -1,13 +1,20 @@
 import React from "react"
 import Button from "../../reusables/Button"
+import {Link} from "react-router-dom"
 
 const Home = () => {
+
+    const redirectToPlants = () => {
+
+    }
+
     return(
         <main className="main--home">
-            <h1>Hello Momo</h1>
-            <h2>Finde <span>deine</span> Pflanze.</h2>
-
-            <Button>Zur Auswahl</Button>
+            <section className="landing-section">
+                <h1 className="huge-font">Momo</h1>
+                <h2 className="slogan">Finde <span className="slogan__highlight">deine</span> Pflanze.</h2>
+                <Link to="/pflanzen" className="button button--home">Zur Auswahl</Link>
+            </section>
         </main>
     )
 }

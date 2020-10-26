@@ -7,10 +7,10 @@ import React from 'react'
  * 
  * @example <Button onClick={() => {console.log('Button clicked')}}>Click me!</Button>
  */
-const Button = ({onClick, children}) => {
+const Button = ({onClick, className, children}) => {
     return (
 
-    <button className="button" onClick={onClick}>
+    <button className={`button ${className}`} onClick={onClick}>
         {children}
     </button>
     )
