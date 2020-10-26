@@ -1,13 +1,7 @@
 import React from "react"
-import Button from "../../reusables/Button"
 import {Link} from "react-router-dom"
 
 const Home = () => {
-
-    const redirectToPlants = () => {
-
-    }
-
     return(
         <main className="main--home">
             <section className="landing-section">
