@@ -16,6 +16,7 @@ Zum Projektordner navigieren
 ## Schritt 3
 Die Dependencies installieren und das Projekt starten
 ```sh
+cd momo
 npm install
 npm start
 ```
