@@ -1,0 +1,33 @@
+.main--home
+    height: calc(100vh - 61px) // total height of navbar
+    width: 100vw
+    max-width: 100vw
+    background-image: url(../../../assets/img/Hero_Plant2.png)
+    background-position: bottom right
+    background-repeat: no-repeat
+    background-size: 40vw
+
+.landing-section
+    @extend .main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 100%
+
+.slogan__highlight
+    animation: slogan-personalize
+    animation-duration: 1s
+    animation-delay: .3s
+    animation-fill-mode: forwards
+    animation-timing-function: ease-in
+
+.button--home
+    width: 175px
+    margin-top: $margin-m
+
+@keyframes slogan-personalize
+    0%
+        color: var(--color-text)
+    100%
+        color: var(--color-secondary)
