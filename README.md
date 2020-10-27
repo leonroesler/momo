@@ -8,7 +8,7 @@ Diese Anwendung wurde mit [Create React App](https://github.com/facebook/create-
 ## Schritt 1
 Das Repository clonen
 ```sh
-git clone git@github.com:leonroesler/momo
+git clone https://github.com/leonroesler/momo.git
 ```
 ## Schritt 2
 Zum Projektordner navigieren
