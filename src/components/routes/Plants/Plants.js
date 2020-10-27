@@ -1,30 +1,25 @@
-import React, {useState, useContext} from "react"
-import Stock from "../../../assets/data/Stock.json"
-import ProductCard from "./ProductCard"
+import React, { useState, useContext } from "react";
+import Stock from "../../../assets/data/Stock.json";
+import ProductCard from "./ProductCard";
 
 const Plants = () => {
+  const [stock, setStock] = useState(Stock);
 
-    const [stock, setStock] = useState(Stock)
+  const renderPlantsGrid = () => {
+    return stock.map((plant) => {
+      return <ProductCard product={plant} />;
+    });
+  };
 
-    const renderPlantsGrid = () => {
-        return (
-            stock.map((plant) => {
-                return (
-                    <ProductCard product={plant}/>
-                )
-            })
-        )
-    }
+  return (
+    <main className="main">
+      <h1>Pflanzen</h1>
+      <div className="product-grid">
+        {renderPlantsGrid()}
+        {renderPlantsGrid()}
+      </div>
+    </main>
+  );
+};
 
-    return(
-        <main className="main">
-            <h1>Pflanzen</h1>
-            <div className="product-grid">
-                {renderPlantsGrid()}
-                {renderPlantsGrid()}
-            </div>
-        </main>
-    )
-}
-
-export default Plants
+export default Plants;
