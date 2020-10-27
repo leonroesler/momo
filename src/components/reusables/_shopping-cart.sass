@@ -1,0 +1,40 @@
+.shopping-card
+    position: absolute
+    top: 100%
+    right: -40%
+    width: 33%
+    height: calc(100vh - 100%) //100vh - height of navbar
+    background-color: var(--color-white)
+    padding: $margin-s
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+    z-index: -1
+    transition: right .3s ease-in-out
+    &--show
+        @extend .shopping-card
+        right: 0
+
+.cart-item-list
+    list-style-type: none
+    padding: $margin-s 0
+    max-height: 60vh
+    overflow-y: scroll
+
+.shopping-card__coupon-form
+    padding: $margin-s 0
+
+.shopping-card__coupon-input
+    border: 1px solid var(--color-text)
+    border-radius: 5px
+    padding: .3rem .5rem
+    font-size: 1rem
+
+.shopping-card__total
+    border-top: 2px solid var(--color-text)
+    padding-top: $margin-s
+    text-align: right
+
+.shopping-card__invalid-code
+    color: var(--color-red)
+
+.shopping-card__valid-code
+    color: var(--color-secondary)

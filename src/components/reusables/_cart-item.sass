@@ -1,0 +1,34 @@
+.cart-item
+    height: 150px
+    background-color: var(--color-primary-light)
+    border-radius: 15px
+    margin-top: $margin-s
+    padding: $margin-s
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.cart-item__product-infos
+    width: 40%
+    height: 100%
+    text-align: center
+
+.cart-item__product-img
+    height: 100%
+    margin-top: -20%
+
+.cart-item__amount-picker
+    text-align: center
+    margin-right: $margin-s
+
+.cart-item__amount-button
+    cursor: pointer
+    transition: transform .2s ease-in-out
+    &:hover
+        transform: scale(1.15)
+
+.cart-item__delete-button
+    @extend .cart-item__amount-button
+    color: var(--color-red)
+    &:hover
+        transform: scale(1.15)

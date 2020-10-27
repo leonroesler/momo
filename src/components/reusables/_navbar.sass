@@ -2,6 +2,9 @@
     background-color: var(--color-white)
     border-bottom: 1px solid var(--color-dark-grey)
     padding: 1em 0
+    position: sticky
+    top: 0
+    z-index: 2
 
 .navbar__main
     width: 100%
@@ -48,3 +51,21 @@
     color: var(--color-primary)
     margin-right: $margin-l
     display: block
+
+.navbar__link--cart
+    position: relative
+
+.cart-badge
+    position: absolute
+    background-color: var(--color-red)
+    color: white
+    border-radius: 100%
+    width: calc(1rem + 5px)
+    height: calc(1rem + 5px)
+    font-size: $small-size
+    padding: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    bottom: 90%
+    left: 60%

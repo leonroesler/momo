@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 import Stock from "../../../assets/data/Stock.json"
 import ProductCard from "./ProductCard"
 

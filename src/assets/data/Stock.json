@@ -6,25 +6,25 @@
     "img": "Kaktus.png"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Bonsai",
     "price": 3999,
     "img": "Bonsai.png"
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "Eukalyptus",
     "price": 1699,
     "img": "Eukalyptus.png"
   },
   {
-    "id": 1,
+    "id": 4,
     "name": "Feigenbaum",
     "price": 1399,
     "img": "Feigenbaum.png"
   },
   {
-    "id": 1,
+    "id": 5,
     "name": "Pilea",
     "price": 1499,
     "img": "Pilea.png"
