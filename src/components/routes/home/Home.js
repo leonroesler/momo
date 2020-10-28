@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * This component renders the landging page of the app
+ */
 const Home = () => {
   return (
     <main className="main--home">

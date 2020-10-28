@@ -2,6 +2,13 @@ import React, { useContext } from "react";
 import Button from "../../reusables/Button";
 import { CartContext } from "../../context/CartContext";
 
+/**
+ * This component renders a card with the name, price and img of a product to buy
+ *
+ * @param {Object} product the product to render
+ *
+ * @example <ProductCard product={plant} />
+ */
 const ProductCard = ({ product }) => {
   const cart = useContext(CartContext);
 

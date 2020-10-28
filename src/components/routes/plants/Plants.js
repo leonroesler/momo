@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Stock from "../../../assets/data/Stock.json";
 import ProductCard from "./ProductCard";
 
+/**
+ * This component renders the product page of the plants
+ */
 const Plants = () => {
   const [stock, setStock] = useState(Stock);
 
