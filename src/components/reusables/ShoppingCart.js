@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import CartItem from "../reusables/CartItem";
-import Button from "../reusables/Button";
 import Coupons from "../../assets/data/Coupons.json";
+import { X } from "react-feather";
 
-const ShoppingCart = ({ show }) => {
+const ShoppingCart = ({ showCart, setShowCart }) => {
   const { cart } = useContext(CartContext);
 
   const [couponText, setCouponText] = useState("");
@@ -40,8 +40,16 @@ const ShoppingCart = ({ show }) => {
   };
 
   return (
-    <aside className={`shopping-card${show ? "--show" : ""}`}>
-      <h2>Warenkorb</h2>
+    <aside className={`shopping-cart${showCart ? "--show" : ""}`}>
+      <header className="cart-header">
+        <h2>Warenkorb</h2>
+        <X
+          className="cart-close"
+          onClick={() => {
+            setShowCart(!showCart);
+          }}
+        />
+      </header>
       <ul className="cart-item-list">
         {cart.map((product) => {
           return (
@@ -51,7 +59,7 @@ const ShoppingCart = ({ show }) => {
           );
         })}
       </ul>
-      <div className="shopping-card__coupon-form">
+      <div className="shopping-cart__coupon-form">
         <form>
           <label for="couponText">Gutscheincode: </label>
           <input
@@ -60,23 +68,23 @@ const ShoppingCart = ({ show }) => {
             type="text"
             name="coupon"
             value={couponText}
-            className="shopping-card__coupon-input"
+            className="shopping-cart__coupon-input"
             onChange={(e) => {
               setCouponText(e.target.value);
             }}
           ></input>
           {wasSubmitted && !hasValidCoupon && (
-            <h6 className="shopping-card__invalid-code">Ungültiger Code!</h6>
+            <h6 className="shopping-cart__invalid-code">Ungültiger Code!</h6>
           )}
           {wasSubmitted && hasValidCoupon && (
-            <h6 className="shopping-card__valid-code">Gültiger Code!</h6>
+            <h6 className="shopping-cart__valid-code">Gültiger Code!</h6>
           )}
           <div className="button" onClick={() => submitCoupon()}>
             Einlösen
           </div>
         </form>
       </div>
-      <div className="shopping-card__total">
+      <div className="shopping-cart__total">
         <h5>Gesamtsumme:&nbsp;&nbsp;{calcTotal()}€</h5>
         {wasSubmitted && hasValidCoupon && (
           <h6>Der Preis wurde um {Coupons[couponText]}% reduziert</h6>

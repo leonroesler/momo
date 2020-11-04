@@ -1,4 +1,4 @@
-.shopping-card
+.shopping-cart
     position: absolute
     top: 100%
     right: -40%
@@ -10,8 +10,18 @@
     z-index: -1
     transition: right .3s ease-in-out
     &--show
-        @extend .shopping-card
+        @extend .shopping-cart
         right: 0
+
+.cart-header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+.cart-close
+    cursor: pointer
+    &:hover
+        color: var(--color-secondary)
 
 .cart-item-list
     list-style-type: none
@@ -19,22 +29,22 @@
     max-height: 60vh
     overflow-y: scroll
 
-.shopping-card__coupon-form
+.shopping-cart__coupon-form
     padding: $margin-s 0
 
-.shopping-card__coupon-input
+.shopping-cart__coupon-input
     border: 1px solid var(--color-text)
     border-radius: 5px
     padding: .3rem .5rem
     font-size: 1rem
 
-.shopping-card__total
+.shopping-cart__total
     border-top: 2px solid var(--color-text)
     padding-top: $margin-s
     text-align: right
 
-.shopping-card__invalid-code
+.shopping-cart__invalid-code
     color: var(--color-red)
 
-.shopping-card__valid-code
+.shopping-cart__valid-code
     color: var(--color-secondary)

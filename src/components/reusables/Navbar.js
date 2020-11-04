@@ -60,7 +60,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <ShoppingCart show={showCart} />
+      <ShoppingCart showCart={showCart} setShowCart={() => setShowCart()} />
     </nav>
   );
 };
