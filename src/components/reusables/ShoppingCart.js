@@ -61,7 +61,9 @@ const ShoppingCart = ({ showCart, setShowCart }) => {
       </ul>
       <div className="shopping-cart__coupon-form">
         <form>
-          <label for="couponText">Gutscheincode: </label>
+          <label for="couponText" className="shopping-cart__coupon-label">
+            Gutscheincode?
+          </label>
           <input
             id="couponText"
             placeholder="Code Eingeben"
@@ -73,15 +75,18 @@ const ShoppingCart = ({ showCart, setShowCart }) => {
               setCouponText(e.target.value);
             }}
           ></input>
+          <div
+            className="shopping-cart__coupon-button button"
+            onClick={() => submitCoupon()}
+          >
+            Einlösen
+          </div>
           {wasSubmitted && !hasValidCoupon && (
             <h6 className="shopping-cart__invalid-code">Ungültiger Code!</h6>
           )}
           {wasSubmitted && hasValidCoupon && (
             <h6 className="shopping-cart__valid-code">Gültiger Code!</h6>
           )}
-          <div className="button" onClick={() => submitCoupon()}>
-            Einlösen
-          </div>
         </form>
       </div>
       <div className="shopping-cart__total">

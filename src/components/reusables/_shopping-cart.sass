@@ -1,14 +1,17 @@
 .shopping-cart
     position: absolute
     top: 100%
-    right: -40%
-    width: 33%
+    right: -101% // 101 because of box shadow
+    width: 420px
     height: calc(100vh - 100%) //100vh - height of navbar
     background-color: var(--color-white)
     padding: $margin-s
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
     z-index: -1
     transition: right .3s ease-in-out
+    @media screen and (max-width: $break-mobile)
+        width: 100%
+        padding: $margin-s $margin-m
     &--show
         @extend .shopping-cart
         right: 0
@@ -32,11 +35,24 @@
 .shopping-cart__coupon-form
     padding: $margin-s 0
 
+.shopping-cart__coupon-label
+    display: block
+
 .shopping-cart__coupon-input
     border: 1px solid var(--color-text)
     border-radius: 5px
     padding: .3rem .5rem
+    margin-right: $margin-s
     font-size: 1rem
+    width: 50%
+    @media screen and (max-width: $break-mobile)
+        width: 100%
+        margin: $margin-xs 0
+
+.shopping-cart__coupon-button
+    display: inline-block
+    @media screen and (max-width: $break-mobile)
+        width: 100%
 
 .shopping-cart__total
     border-top: 2px solid var(--color-text)

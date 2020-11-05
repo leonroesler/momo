@@ -16,27 +16,29 @@ const CartItem = ({ product }) => {
 
   return product !== undefined ? (
     <div className="cart-item">
-      <div className="cart-item__product-infos">
-        <img
-          src={require(`../../assets/img/${product.img}`).default}
-          className="cart-item__product-img"
-        />
-        <h5 className="cart-item__product-name">
-          {product.name ? product.name : "-"}
-        </h5>
-        <h6 className="cart-item__price">{convertPrice(product.price)}€</h6>
-      </div>
-      <div className="cart-item__amount-picker">
-        <PlusCircle
-          onClick={() => cart.increaseAmount(product.id, cart)}
-          className="cart-item__amount-button"
-        />
-        <h6>Anzahl</h6>
-        <h5>{product.amount}</h5>
-        <MinusCircle
-          onClick={() => cart.decreaseAmount(product.id, cart)}
-          className="cart-item__amount-button"
-        />
+      <div className="cart-item__product">
+        <div className="cart-item__product-infos">
+          <img
+            src={require(`../../assets/img/${product.img}`).default}
+            className="cart-item__product-img"
+          />
+          <h5 className="cart-item__product-name">
+            {product.name ? product.name : "-"}
+          </h5>
+          <h6 className="cart-item__price">{convertPrice(product.price)}€</h6>
+        </div>
+        <div className="cart-item__amount-picker">
+          <PlusCircle
+            onClick={() => cart.increaseAmount(product.id, cart)}
+            className="cart-item__amount-button"
+          />
+          <h6>Anzahl</h6>
+          <h5>{product.amount}</h5>
+          <MinusCircle
+            onClick={() => cart.decreaseAmount(product.id, cart)}
+            className="cart-item__amount-button"
+          />
+        </div>
       </div>
 
       <h5 className="cart-item__total">{calcTotal()}€</h5>
